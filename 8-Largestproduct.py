@@ -9,6 +9,12 @@ def naive_search(number, prod_length):
             prod *= int(number[k+i])
         if prod > prod_max:
             prod_max = prod
-    return prod_max
+            position=k
+            numbers=[number[i] for i in range(k,k+prod_length)]
+    return print('Product value:',prod_max, '   Position:', position, '    Numbers:', numbers)
 
-naive_search(a,4)
+naive_search(a,13)
+
+'''
+Product value: 23514624000    Position: 195     Numbers: ['5', '5', '7', '6', '6', '8', '9', '6', '6', '4', '8', '9', '5']
+'''
